@@ -2,7 +2,7 @@
 ## UPDATE 2021.03
 本人基于该项目开发的关于保险行业的聊天机器人（也附加了任务型的，比如保险产品推销），数据保密。
 
-你们可以尝试关于https://github.com/chatopera/insuranceqa-corpus-zh 语料的数据做
+你们可以尝试关于https://github.com/chatopera/insuranceqa-corpus-zh 语料做
 ## UPDATE 2019.12.17
 基于微软的论文[DialoGPT:Large-Scale Generative Pre-training for Conversational Response Generation](https://arxiv.xilesou.top/pdf/1911.00536.pdf)添加了MMI Model(maximum mutual information scoring function),对dialogue model生成的多个response进行筛选
 
@@ -15,13 +15,13 @@
 - 代码中给出了许多详细的中文注释，方便大家更好地理解代码
 
 ## 运行环境
-```angular2
+```
 python3.6.8 
 transformers==2.1.1
 pytorch==1.3.1
 ```
 
-pytorch[下载地址](https://download.pytorch.org/whl/torch_stable.html),选取适配自己的包
+pytorch[下载地址](https://download.pytorch.org/whl/torch_stable.html),选取适配自己开发环境的包
 
 ## 项目结构
 - config:存放GPT2模型的参数的配置文件
@@ -32,6 +32,7 @@ pytorch[下载地址](https://download.pytorch.org/whl/torch_stable.html),选取
 - dialogue_model:存放对话生成的模型
 - mmi_model:存放MMI模型(maximum mutual information scoring function)，用于预测P(Source|response)
 - sample:存放人机闲聊生成的历史聊天记录
+- tensorboard_summary:存放记录的数据格式，生成折线图、统计直方图、图片列表等多种图（数据可视化）
 - vocabulary:存放GPT2模型的字典
 - train.py:训练代码
 - interact.py:人机交互代码
